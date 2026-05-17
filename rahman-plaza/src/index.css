@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #121212;
+  --color-gold: #D4AF37;
+  --color-deep-green: #0A2F1F;
+  --color-warm-white: #F5F5F0;
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  
+  --color-palladium-cream: #FAFAF7;
+  --color-amber-glow: #C86A27;
+  --color-espresso: #2B2624;
+  
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-palladium-heading: "Playfair Display", serif;
+  --font-palladium-body: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-warm-white font-body selection:bg-gold/30;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border shadow-xl;
+  }
+  
+  .glass-gold {
+    @apply bg-gold/5 backdrop-blur-md border border-gold/20 shadow-xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-charcoal;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/30 rounded-full hover:bg-gold/50 transition-colors;
+}
+

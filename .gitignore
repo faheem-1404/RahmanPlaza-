@@ -1,0 +1,8 @@
+node_modules
+.next
+dist
+.env
+.DS_Store
+rahman-plaza/node_modules
+rahman-plaza/dist
+rahman-plaza/.env
